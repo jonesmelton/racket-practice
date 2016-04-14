@@ -5,12 +5,17 @@
 (define (sqr x) (* x x))
 
 ; f-to-c number -> number
-(define (f-to-c f) (num-times-5-over-9 (f-minus-32 num)))
+(define (f-to-c f) (num-times-5-over-9 (f-minus-32 f)))
 
 ; f-minus-32 number -> number
-(define (f-minus-32 f) (f - 32))
+(define (f-minus-32 f) (- f 32))
 
 ; num-times-5-over-9
 (define (num-times-5-over-9 num) (* num (/ 5 9)))
 
-(f-to-c 40)
+; temp-checker number -> string
+(define (broken num) (if (> (f-to-c num) 0) (write "brrr") (write "could be worse")))
+(define temp-checker (num) (if (> 0) (write "brrr") (write "could be worse")))
+
+(temp-checker 10)
+(temp-checker -10)
