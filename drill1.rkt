@@ -15,7 +15,7 @@
 
 ; temp-checker number -> string
 (define (broken num) (if (> (f-to-c num) 0) (write "brrr") (write "could be worse")))
-(define temp-checker (num) (if (> 0) (write "brrr") (write "could be worse")))
+(define (temp-checker num) (if (< (f-to-c num) 0) (write "brrr") (write "could be worse")))
 
-(temp-checker 10)
+(temp-checker 50)
 (temp-checker -10)
