@@ -30,3 +30,7 @@
 ; first-last : list -> list
 (define (first-last list)
   (cons (car list) (last-item list)))
+
+; evens : list -> list
+(define (even-finder list)
+  (filter even? list))
