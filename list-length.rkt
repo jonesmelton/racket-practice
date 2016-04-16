@@ -6,6 +6,13 @@
 ; find-index : list item -> number
 ; (define (find-index list item) ())
 
-(define (list-traverser list item index) (if (= (car list) item) (index) (list-traverser (cdr list) item (+ index 1))))
+(define (index-of list item counter)
+      (if (null? list)
+         -1
+        (if (= (car list) item)
+          counter
+          (index-of (cdr list) item (+ 1 counter)))))
+
+
 
 
