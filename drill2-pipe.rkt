@@ -13,4 +13,3 @@
 ; pipe-area : number number number -> number
 (define (pipe-area inner-rad outer-rad length) (+ (single-surface-area inner-rad length)
                                                   (single-surface-area outer-rad length)))
-
