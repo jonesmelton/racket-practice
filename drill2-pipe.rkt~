@@ -1,3 +1,0 @@
-#lang racket
-
-(define (diameter radius) (* (* radius 2) 3.14))
